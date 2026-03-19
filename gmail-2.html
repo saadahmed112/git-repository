@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Gmail Inbox</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f3f4;
+    }
+    .topbar {
+      background: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topbar .logo {
+      font-size: 18px;
+      margin: 0;
+      color: #5f6368;
+      font-weight: bold;
+    }
+    .topbar .search-bar input {
+      width: 400px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-left: 20px;
+    }
+    .topbar .compose-btn {
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    .topbar .profile {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #fff;
+      margin-left: auto;
+    }
+    .sidebar {
+      width: 200px;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+      float: left;
+      padding: 15px;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      color: #202124;
+      margin-bottom: 10px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 8px;
+      font-size: 13px;
+      color: #5f6368;
+      cursor: pointer;
+    }
+    .sidebar ul li:hover {
+      background: #f1f3f4;
+    }
+    .inbox {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    .email {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .email:hover {
+      background: #f9f9f9;
+    }
+    .email .checkbox {
+      margin-right: 10px;
+    }
+    .email .star {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .email .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .email .content {
+      flex: 1;
+    }
+    .email .sender {
+      font-weight: bold;
+      color: #202124;
+      margin-bottom: 2px;
+    }
+    .email .subject {
+      color: #5f6368;
+      margin-bottom: 2px;
+    }
+    .email .snippet {
+      color: #5f6368;
+      font-size: 12px;
+    }
+    .email .time {
+      color: #5f6368;
+      font-size: 12px;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">Gmail</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search mail" />
+    </div>
+    <button class="compose-btn">Compose</button>
+    <div class="profile">P</div>
+  </div>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><span class="icon">📧</span> Inbox</li>
+      <li><span class="icon">⭐</span> Starred</li>
+      <li><span class="icon">📤</span> Sent</li>
+      <li><span class="icon">📝</span> Drafts</li>
+      <li><span class="icon">🗂️</span> All Mail</li>
+      <li><span class="icon">🗑️</span> Trash</li>
+      <li><span class="icon">🚫</span> Spam</li>
+    </ul>
+  </div>
+  <div class="inbox">
+    <div class="email">
+      <input type="checkbox" class="checkbox">
+      <span class="star">☆</span>
+      <div class="avatar">S</div>
+      <div class="content">
+        <div class="sender">Slide.ai</div>
+        <div class="subject">Welcome to Slide.ai – Student Plan Activated 🎉</div>
+        <div class="snippet">Your student plan has been activated. Start creating amazing presentations today!</div>
+      </div>
+      <div class="time">Feb 1</div>
+    </div>
+    <div class="email">
+      <input type="checkbox" class="checkbox">
+      <span class="star">☆</span>
+      <div class="avatar">M</div>
+      <div class="content">
+        <div class="sender">Microsoft</div>
+        <div class="subject">Your account security update</div>
+        <div class="snippet">We've updated your security settings. Please review your account.</div>
+      </div>
+      <div class="time">Jan 30</div>
+    </div>
+    <div class="email">
+      <input type="checkbox" class="checkbox">
+      <span class="star">☆</span>
+      <div class="avatar">C</div>
+      <div class="content">
+        <div class="sender">Coursera</div>
+        <div class="subject">New courses recommended for you</div>
+        <div class="snippet">Based on your interests, here are some courses you might like.</div>
+      </div>
+      <div class="time">Jan 28</div>
+    </div>
+    <div class="email">
+      <input type="checkbox" class="checkbox">
+      <span class="star">☆</span>
+      <div class="avatar">G</div>
+      <div class="content">
+        <div class="sender">Google</div>
+        <div class="subject">Your Google account activity</div>
+        <div class="snippet">Recent sign-ins to your account from new devices.</div>
+      </div>
+      <div class="time">Jan 25</div>
+    </div>
+    <div class="email">
+      <input type="checkbox" class="checkbox">
+      <span class="star">☆</span>
+      <div class="avatar">A</div>
+      <div class="content">
+        <div class="sender">Amazon</div>
+        <div class="subject">Your order has been shipped</div>
+        <div class="snippet">Track your package and get delivery updates.</div>
+      </div>
+      <div class="time">Jan 22</div>
+    </div>
+  </div>
+</body>
+</html>
